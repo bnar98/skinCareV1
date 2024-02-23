@@ -16,34 +16,11 @@ class WelcomeComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height - 200;
-    final GoRouter router = GoRouter.of(context);
 
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Row(
-            mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  router.go("/login");
-                  // Perform the action you want when the text is clicked
-                  print('Text Clicked!');
-                },
-                child: const Text(
-                  'skip',
-                  style: TextStyle(
-                    color:
-                        primaryColor, // You can change the color as per your requirement
-                  ),
-                ),
-              ),
-              const SizedBox(
-                width: 30,
-              )
-            ],
-          ),
           Image(
             image: AssetImage(image),
           ),
